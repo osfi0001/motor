@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Øvelser</title>
+  </head>
+  <body>
+    <article id="toolSongs">
+      <img src="" alt="toolCover" />
+      <h1>Band</h1>
+      <h2>monthlyListeners</h2>
+      <h3>topSong</h3>
+      <ul>
+        favouriteSongs
+      </ul>
+    </article>
+  </body>
+</html>
+
+<script>
+  const music = {
+    band: "TOOL",
+    topSong: "Schism",
+    monthlyListeners: "4.2 million",
+    favouriteSongs: ["Right in two", "Vicarious", "Rosetta Stoned", "Parabola"],
+    picture: "tool.WEBP",
+  };
+
+  const toolMusic = document.querySelector("#toolSongs");
+  toolSongs.querySelector("img").src = "billeder/" + music.picture;
+  toolSongs.querySelector("h1").textContent = music.band;
+  toolSongs.querySelector("h2").textContent = music.topSong;
+  toolSongs.querySelector("h3").textContent = music.monthlyListeners;
+  toolSongs.querySelector("ul").textContent = music.favouriteSongs;
+
+  const list = document.querySelector("ul");
+
+  favouriteSongs.forEach(placeList);
+
+  function placeList(element) {
+    console.log(element);
+
+    list.innerHTML += "<li>" + element + "</li>";
+  }
+</script>
