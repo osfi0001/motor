@@ -19,13 +19,27 @@
 </html>
 
 <script>
-  const music = {
-    band: "TOOL",
-    topSong: "Schism",
-    monthlyListeners: "4.2 million",
-    favouriteSongs: ["Right in two", "Vicarious", "Rosetta Stoned", "Parabola"],
-    picture: "tool.WEBP",
-  };
+  const music = [
+    {
+      band: "TOOL",
+      topSong: "Schism",
+      monthlyListeners: "4.2 million",
+      favouriteSongs: ["Right in two", "Vicarious", "Rosetta Stoned", "Parabola"],
+      picture: "tool.WEBP",
+    },
+    {
+      band: "Knocked Loose",
+      topSong: "Blinding Faith",
+      monthlyListeners: "1 million",
+      favouriteSongs: ["Blinding Faith", "Thirst"],
+    },
+    {
+      band: "AREYOUSURE",
+      topSong: "Buss Down On a Grape",
+      monthlyListeners: "14",
+      favouriteSongs: ["MDMA", "Raygun", "Dead Flowers", "Explosive Personality"],
+    },
+  ];
 
   const toolMusic = document.querySelector("#toolSongs");
   toolSongs.querySelector("img").src = "billeder/" + music.picture;
@@ -33,14 +47,4 @@
   toolSongs.querySelector("h2").textContent = music.topSong;
   toolSongs.querySelector("h3").textContent = music.monthlyListeners;
   toolSongs.querySelector("ul").textContent = music.favouriteSongs;
-
-  const list = document.querySelector("ul");
-
-  favouriteSongs.forEach(placeList);
-
-  function placeList(element) {
-    console.log(element);
-
-    list.innerHTML += "<li>" + element + "</li>";
-  }
 </script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ØVELSER3</title>
+  </head>
+  <body>
+    <template id="musicTemplate">
+      <article class="bands">
+        <h1>band</h1>
+        <div>topSong</div>
+        <p>monthlyListeners</p>
+        <div>favouriteSongs</div>
+      </article>
+    </template>
+
+    <section></section>
+  </body>
+</html>
+
+<script>
+  const music = [
+    {
+      artist: "TOOL",
+      topSong: "Schism",
+      monthlyListeners: "4.2 million",
+      favouriteSongs: ["Right in two", "Vicarious", "Rosetta Stoned", "Parabola"],
+      picture: "tool.WEBP",
+    },
+    {
+      artist: "Knocked Loose",
+      topSong: "Blinding Faith",
+      monthlyListeners: "1 million",
+      favouriteSongs: ["Blinding Faith", "Thirst"],
+    },
+    {
+      artist: "AREYOUSURE",
+      topSong: "Buss Down On a Grape",
+      monthlyListeners: "14",
+      favouriteSongs: ["MDMA", "Raygun", "Dead Flowers", "Explosive Personality"],
+    },
+  ];
+
+  const temp = document.querySelector("#musicTemplate").content;
+
+  music.forEach(showSong);
+
+  function showSong(element) {
+    console.log(element);
+
+    const clone = temp.cloneNode(true);
+    clone.querySelector("h1").textContent = music.band;
+    clone.querySelector("div").textContent = music.topSong;
+    clone.querySelector("p").textContent = music.monthlyListeners;
+    clone.querySelector("div").textContent = music.favouriteSongs;
+    const container = document.querySelector("body");
+    container.appendChild(clone);
+  }
+</script>
